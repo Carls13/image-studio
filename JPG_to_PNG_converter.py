@@ -25,7 +25,7 @@ def convert_images():
 		if not img.format == 'JPEG':
 			print("Not a JPG file")
 			continue
-		filename = file.replace(".jpg", ".png")
+		filename = os.path.splitext(file)[0]
 		img.save(f'{to_directory}{filename}', 'png')
 
 convert_images()
